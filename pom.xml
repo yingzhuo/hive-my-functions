@@ -14,12 +14,6 @@
 
         <!-- language -->
         <java.version>1.8</java.version>
-
-        <!-- frameworks -->
-        <hive.version>3.1.2</hive.version>
-
-        <!-- configuration -->
-        <maven.test.skip>true</maven.test.skip>
     </properties>
 
     <dependencies>
@@ -27,7 +21,7 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
-            <version>${hive.version}</version>
+            <version>3.1.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -86,7 +80,7 @@
                     <archive>
                         <manifestEntries>
                             <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-                            <Implementation-Version>${version}</Implementation-Version>
+                            <Implementation-Version>${project.version}</Implementation-Version>
                         </manifestEntries>
                     </archive>
                 </configuration>
