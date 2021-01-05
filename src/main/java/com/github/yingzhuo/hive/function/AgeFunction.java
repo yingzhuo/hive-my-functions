@@ -40,11 +40,11 @@ public class AgeFunction extends GenericUDF {
         }
 
         if (!(arguments[0] instanceof StringObjectInspector)) {
-            throw new UDFArgumentTypeException(0, "AgeFunction parameter (date) 0 need to string.");
+            throw new UDFArgumentTypeException(0, "AgeFunction parameter 1 need to string.");
         }
 
         if (!(arguments[1] instanceof StringObjectInspector)) {
-            throw new UDFArgumentTypeException(0, "AgeFunction parameter (pattern) 1 need to string.");
+            throw new UDFArgumentTypeException(0, "AgeFunction parameter 2 need to string.");
         }
 
         this.dateObject = (StringObjectInspector) arguments[0];
